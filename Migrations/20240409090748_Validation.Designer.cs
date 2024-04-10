@@ -4,16 +4,16 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TodoApi.Data;
 using TodoApi.Models;
+using TodoApi.Data;
 
 #nullable disable
 
 namespace TodoApi.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20240408170616_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20240409090748_Validation")]
+    partial class Validation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
