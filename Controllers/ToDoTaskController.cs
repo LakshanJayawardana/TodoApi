@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using TodoApi.Data;
 using TodoApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+
 namespace TodoApi.Controllers;
 
 [Route("api/[controller]")]
@@ -15,6 +18,7 @@ public class ToDoTaskController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<ActionResult> GetAllToDoTasksAction()
     {
         // Get tasks from database
